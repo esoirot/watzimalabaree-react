@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -56,6 +58,18 @@ a:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+label {
+  @apply text-primary font-medium
+}
+
+input, select, option {
+  @apply bg-main text-charcoal rounded-md
+}
+
+input[type=checkbox] {
+  @apply bg-main  rounded size-4
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -67,4 +81,50 @@ a:focus-visible {
   button, a {
     background-color: #f9f9f9;
   }
+}
+
+/* Core colors */
+/* Background color (paper) => Warm parchment => #F5F1EA
+Primary (wood) => Walnut brown => #6B4F3F
+Secondary (leather) => Deep oxblood => #7A2E2E
+Accent (bookmark) => Antique gold => #C9A24D
+Text (ink) => Charcoal black => #2B2B2B */
+
+/* Supporting Color */
+/* Muted background => Light linen => #E8E1D8
+Borders / dividesr => Aged paper edge => #D1C7BA
+Success => Forest green => #3E6B4E
+Warning => Burnt amber => #C97A2B
+Error => Brick Red => #9E3A2F */
+
+/* :root {
+  --bg-main: #F5F1EA;
+  --bg-muted: #E8E1D8;
+
+  --primary: #6B4F3F;
+  --secondary: #7A2E2E;
+  --accent: #C9A24D;
+
+  --text-main: #2B2B2B;
+  --border: #D1C7BA;
+
+  --success: #3E6B4E;
+  --warning: #C97A2B;
+  --error: #9E3A2F;
+} */
+
+@theme {
+  --color-main: #F5F1EA;
+  --color-muted: #E8E1D8;
+
+  --color-primary: #6B4F3F;
+  --color-secondary: #7A2E2E;
+  --color-accent: #C9A24D;
+
+  --color-charcoal: #2B2B2B;
+  --color-border: #D1C7BA;
+
+  --color-success: #3E6B4E;
+  --color-warning: #C97A2B;
+  --color-error: #9E3A2F;
 }
